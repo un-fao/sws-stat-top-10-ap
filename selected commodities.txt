@@ -1,0 +1,22 @@
+Item.Code	Item
+156	Sugar cane
+56	Maize
+27	"Rice, paddy"
+15	Wheat
+882	"Milk, whole fresh cow"
+116	Potatoes
+236	Soybeans
+125	Cassava
+157	Sugar beet
+254	Oil palm fruit
+388	Tomatoes
+44	Barley
+1035	"Meat, pig"
+486	Bananas
+1058	"Meat, chicken"
+403	"Onions, dry"
+951	"Milk, whole fresh buffalo"
+122	Sweet potatoes
+515	Apples
+1062	"Eggs, hen, in shell"
+867	"Meat, cattle"

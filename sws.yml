@@ -1,0 +1,6 @@
+# SWS connection settings for fetch_sws_ap.R.
+# token: your personal SWS token (SWS web interface > your Agricultural
+#        Production session > token). Each user must put their own token here.
+#        Do not commit a real token to a shared repository.
+server: https://sws.aws.fao.org:8181
+token: ca4d7291-f404-467a-acb7-23c2f3af808f

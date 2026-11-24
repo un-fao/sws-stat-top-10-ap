@@ -1,0 +1,6 @@
+Item.Code	Item
+866	Cattle
+976	Sheep
+1016	Goats
+1034	Pigs
+1057	Chickens

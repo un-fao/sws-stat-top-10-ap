@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Emacs lock/backup files
+.#*
+*~
+
+# Old FAOSTAT downloads and intermediate data (not used by the app)
+FAOSTAT_data_*.csv
+Faostat_*_2020_2023.csv
+SWS_*_2021_2024.csv
+review/
