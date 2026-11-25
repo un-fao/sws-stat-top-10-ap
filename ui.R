@@ -8,7 +8,7 @@
 #
 library(shiny)
 
-navbarPage('Main Commodities Production Data Analysis',
+navbarPage(paste0('Main Commodities Production Data Analysis (', base_year, ' vs ', base_year - 1, ')'),
   tabPanel('Dynamic',
            # Input: Select the random distribution type ----
            # selectInput("staorfl", "Commodity type:", c("Static", "Dynamic")),
@@ -36,7 +36,17 @@ navbarPage('Main Commodities Production Data Analysis',
                      tabsetPanel(type = "tabs",
                                  tabPanel("Primary commodities static", dataTableOutput("staticPrimary")),
                                  tabPanel("Live animal static", dataTableOutput("staticLiveanimal"))))
-           )
+           ),
+
+  tabPanel('Refresh data',
+           sidebarPanel(selectInput("base_year", "Base year (compared with previous year):",
+                                    choices = rev(2015:as.integer(format(Sys.Date(), "%Y"))), selected = base_year),
+                        passwordInput("sws_token", "SWS token (optional):",
+                                      placeholder = "Leave empty to use the token in sws.yml"),
+                        actionButton("load_data", "Load saved data"),
+                        actionButton("fetch_data", "Fetch from SWS and load"),
+                        helpText("Fetching takes 1-2 minutes. The base year applies to everyone using the app.")),
+           mainPanel(verbatimTextOutput("data_status")))
 
   )
 

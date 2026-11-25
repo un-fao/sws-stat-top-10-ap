@@ -59,7 +59,9 @@ CHINA_AGGREGATES <- c("157", "159", "159.03", "1248", "1249")
 
 # ---- Connect ----
 settings <- yaml::read_yaml(opt$yml)
-GetTestEnvironment(baseUrl = settings[["server"]], token = trimws(settings[["token"]]))
+token <- trimws(Sys.getenv("SWS_TOKEN"))          # set by the app's Refresh tab
+if (!nzchar(token)) token <- trimws(settings[["token"]])
+GetTestEnvironment(baseUrl = settings[["server"]], token = token)
 
 # ---- Reference FAOSTAT files: item/element pairs and names ----
 read_ref <- function(f) {

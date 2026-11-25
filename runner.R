@@ -8,7 +8,8 @@
 options(shiny.host = "0.0.0.0", shiny.port = 8080)
 
 source("global.R", local = globalenv())
-ui     <- source("ui.R",     local = globalenv())$value
+# UI is built on each page load so it reflects the currently loaded data/base year
+ui     <- function(req) source("ui.R", local = globalenv())$value
 server <- source("server.R", local = globalenv())$value
 
 shiny::runApp(shiny::shinyApp(ui = ui, server = server),

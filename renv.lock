@@ -5,6 +5,10 @@
       {
         "Name": "CRAN",
         "URL": "https://packagemanager.posit.co/cran/latest"
+      },
+      {
+        "Name": "FAO",
+        "URL": "https://rstudiopm.fao.org/fao-sws-cran/latest"
       }
     ]
   },
@@ -35,6 +39,28 @@
       ],
       "Hash": "d4335fe7207f1c01ab8c41762f5840d4"
     },
+    "RCurl": {
+      "Package": "RCurl",
+      "Version": "1.98-1.20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "bitops",
+        "methods"
+      ],
+      "Hash": "d4dddff40aa1a9b467a583cffdffeb41"
+    },
+    "RJSONIO": {
+      "Package": "RJSONIO",
+      "Version": "2.0.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "methods"
+      ],
+      "Hash": "f006efd3232b55806a00db5a14dd2cf6"
+    },
     "Rcpp": {
       "Package": "Rcpp",
       "Version": "1.1.2",
@@ -56,6 +82,38 @@
         "R"
       ],
       "Hash": "5edb675b7baa6e9a0d86dd2c28de1676"
+    },
+    "bit": {
+      "Package": "bit",
+      "Version": "4.6.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "ebe86ffd194564abdc895d87742d5a29"
+    },
+    "bit64": {
+      "Package": "bit64",
+      "Version": "4.8.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "bit",
+        "graphics",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "36ab281fe85b6294eb3d9f220880383c"
+    },
+    "bitops": {
+      "Package": "bitops",
+      "Version": "1.1-0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "baf391dcfdfee22a934bdc688a4c0adf"
     },
     "bslib": {
       "Package": "bslib",
@@ -121,6 +179,16 @@
       ],
       "Hash": "8b008bc619e0bbebb5646b3d37efdad1"
     },
+    "curl": {
+      "Package": "curl",
+      "Version": "8.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "dcc26807db0bc989e0287a1f77f82dae"
+    },
     "data.table": {
       "Package": "data.table",
       "Version": "1.18.6.1",
@@ -152,6 +220,43 @@
         "R"
       ],
       "Hash": "94cf2c54237f6841cee68e3ba4ab5a14"
+    },
+    "faosws": {
+      "Package": "faosws",
+      "Version": "1.1.2",
+      "Source": "Local",
+      "Type": "Package",
+      "Title": "API providing access to the FAO Statistical Working System",
+      "Authors@R": "c( person(\"Engineering Ingegneria Informatica\", role=\"aut\"), person(\"Sebastian\", \"Campbell\", email=\"Sebastian.Campbell@fao.org\", role=\"cre\"), person(\"Joshua\", \"Browning\", email=\"Joshua.Browning@fao.org\", role=\"ctb\"))",
+      "Description": "API providing access to the FAO Statistical Working System.",
+      "License": "file LICENCE",
+      "BugReports": "https://sdlc.review.fao.org/jira/projects/SWS/issues",
+      "Depends": [
+        "R (>= 3.0)"
+      ],
+      "Imports": [
+        "methods",
+        "RCurl",
+        "curl (>= 2.5)",
+        "RJSONIO",
+        "jsonlite",
+        "data.table (>= 1.9.6)",
+        "bit64"
+      ],
+      "Collate": "'AddViolation.R' 'Metadata.R' 'BlockMetadata.R' 'BlockMetadataSet.R' 'Changeset.R' 'CheckDebug.R' 'ClearSessionOnly.R' 'DatasetKey.R' 'Dimension.R' 'DtDimension.R' 'FetchDatatableConfig.R' 'FetchSWSVariable.R' 'GetBlockMetadata.R' 'GetCodeList.R' 'GetCodeTree.R' 'GetData.R' 'GetDatasetConfig.R' 'GetDatasetNames.R' 'GetDatatableConfig.R' 'GetDatatableNames.R' 'GetDomainNames.R' 'GetHistory.R' 'GetMapping.R' 'GetRestCall.R' 'GetTableData.R' 'GetTestEnvironment.R' 'HandleHTTPError.R' 'KeyDefinition.R' 'MappingTableKey.R' 'MetadataElement.R' 'NullToNa.R' 'Pivoting.R' 'PostRestCall.R' 'PutRestCall.R' 'ReadDatatable.R' 'ReadQualityIndicators.R' 'SaveBlockMetadata.R' 'SaveData.R' 'SaveDatatable.R' 'SaveValidation.R' 'SetClientFiles.R' 'SetTableData.R' 'WriteQualityIndicators.R' 'buildModifiedCells.R' 'faosws-package.R'",
+      "Suggests": [
+        "testthat (>= 2.0)"
+      ],
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "Repository": "RSPM",
+      "Date": "2024-12-27",
+      "NeedsCompilation": "no",
+      "Author": "Engineering Ingegneria Informatica [aut], Sebastian Campbell [cre], Joshua Browning [ctb]",
+      "Maintainer": "Sebastian Campbell <Sebastian.Campbell@fao.org>",
+      "RemoteType": "local",
+      "RemoteSha": "f04034cdf107dfdb0e727662d410a47cdd7c992c",
+      "RemoteUrl": "/home/ankur/R/library/faosws"
     },
     "fastmap": {
       "Package": "fastmap",
